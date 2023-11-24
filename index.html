@@ -7,8 +7,19 @@
 </head>
 <body>
     <h1>Disc Golf Handicap Calculator</h1>
-    <p>Enter your last 8 round ratings:</p>
-    <input id="ratings" type="text" placeholder="Enter ratings separated by commas">
+    <p>Enter your last 8 round ratings, one per line:</p>
+    
+    <div id="rating-inputs">
+        <input type="number" id="rating1" placeholder="Round 1 Rating"><br>
+        <input type="number" id="rating2" placeholder="Round 2 Rating"><br>
+        <input type="number" id="rating3" placeholder="Round 3 Rating"><br>
+        <input type="number" id="rating4" placeholder="Round 4 Rating"><br>
+        <input type="number" id="rating5" placeholder="Round 5 Rating"><br>
+        <input type="number" id="rating6" placeholder="Round 6 Rating"><br>
+        <input type="number" id="rating7" placeholder="Round 7 Rating"><br>
+        <input type="number" id="rating8" placeholder="Round 8 Rating"><br>
+    </div>
+    
     <button onclick="calculateHandicap()">Calculate Handicap</button>
     <p id="result"></p>
 
