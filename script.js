@@ -1,13 +1,17 @@
 function calculateHandicap() {
-    var ratingsInput = document.getElementById('ratings').value;
-    var ratings = ratingsInput.split(',').map(Number).filter(n => !isNaN(n));
+    var ratings = [];
+    for (var i = 1; i <= 8; i++) {
+        var rating = document.getElementById('rating' + i).value;
+        if (rating) {
+            ratings.push(Number(rating));
+        }
+    }
 
     if (ratings.length < 8) {
-        document.getElementById('result').innerText = 'Please enter at least 8 round ratings.';
+        document.getElementById('result').innerText = 'Please enter 8 round ratings.';
         return;
     }
 
-    ratings = ratings.slice(-8);
     var averageRating = ratings.reduce((a, b) => a + b, 0) / ratings.length;
     var handicap = (1000 - averageRating) / 10;
 
