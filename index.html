@@ -7,22 +7,32 @@
     <title>Disc Golf Handicap Calculator</title>
 </head>
 <body>
-    <h1>Disc Golf Handicap Calculator</h1>
-    <p>Enter your 8 highest round ratings out of your last 20, one per line:</p>
-    
-    <div id="rating-inputs">
-        <input type="number" id="rating1" placeholder="Round 1 Rating"><br>
-        <input type="number" id="rating2" placeholder="Round 2 Rating"><br>
-        <input type="number" id="rating3" placeholder="Round 3 Rating"><br>
-        <input type="number" id="rating4" placeholder="Round 4 Rating"><br>
-        <input type="number" id="rating5" placeholder="Round 5 Rating"><br>
-        <input type="number" id="rating6" placeholder="Round 6 Rating"><br>
-        <input type="number" id="rating7" placeholder="Round 7 Rating"><br>
-        <input type="number" id="rating8" placeholder="Round 8 Rating"><br>
+    <div class="container">
+        <header>
+            <h1>Disc Golf Handicap Calculator By Great Beyond Disc Supply</h1>
+            <p>Ever felt that your disc golf rating doesn't fully capture your best days on the course? We understand. Disc golf ratings provide an average based on all your play, which can sometimes undervalue those moments of brilliance. That's why we've introduced the Disc Golf Handicap Tool, a game-changer that's all about unlocking your potential!</p>
+        </header>
+
+        <div id="calculator">
+            <p>Enter your 8 highest round ratings out of your last 20, one per line:</p>
+            <div id="rating-inputs">
+                <input type="number" id="rating1" placeholder="Round 1 Rating"><br>
+                <input type="number" id="rating2" placeholder="Round 2 Rating"><br>
+                <input type="number" id="rating3" placeholder="Round 3 Rating"><br>
+                <input type="number" id="rating4" placeholder="Round 4 Rating"><br>
+                <input type="number" id="rating5" placeholder="Round 5 Rating"><br>
+                <input type="number" id="rating6" placeholder="Round 6 Rating"><br>
+                <input type="number" id="rating7" placeholder="Round 7 Rating"><br>
+                <input type="number" id="rating8" placeholder="Round 8 Rating"><br>
+            </div>
+            <button onclick="calculateHandicap()">Calculate Handicap</button>
+            <p id="result"></p>
+        </div>
+
+        <footer>
+            <p>This tool was developed by Greg Barber and the team at <a href="https://greatbeyond.substack.com" target="_blank">Great Beyond Disc Golf</a>.</p>
+        </footer>
     </div>
-    
-    <button onclick="calculateHandicap()">Calculate Handicap</button>
-    <p id="result"></p>
 
     <script src="script.js"></script>
 </body>
